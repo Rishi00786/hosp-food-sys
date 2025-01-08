@@ -18,7 +18,7 @@ const App = () => {
 
   return (
     <Router>
-      <div className="w-[100vw] min-h-[100vh] flex flex-col items-center justify-center bg-stone-200">
+      <div className="w-[100vw] min-h-[100vh] flex flex-col items-center justify-center bg-gradient-to-br from-blue-50 via-white to-blue-100">
         <Routes>
 
           <Route path="/" element={<Login />} />
