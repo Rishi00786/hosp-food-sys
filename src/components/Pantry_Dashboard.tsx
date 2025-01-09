@@ -78,6 +78,22 @@ const Pantry_Dashboard = () => {
     } catch (error) {
       console.error("Error assigning del person", error);
     }
+
+    try {
+      const api_url = "http://localhost:3000"
+      const response = await fetch(`${api_url}/meals/update/${thisMealId}`, {
+        method: 'PUT',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({ assignedToDel: true }),
+      })
+      if (!response.ok) {
+        throw new Error(`HTTP error! status: ${response.status}`);
+      }
+    } catch (error) {
+      console.error("Error assigning del person", error);
+    }
   }
 
 
