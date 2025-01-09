@@ -10,7 +10,8 @@ const Delivery_Dashboard = () => {
     const nDel = thatMeal?.nightMealDel;
   
     try {
-      const api_url = "http://localhost:3000";
+      // const api_url = "http://localhost:3000";
+      const api_url = import.meta.env.VITE_API_URL
       const response = await fetch(`${api_url}/delivery/update/${deliveryId}`, {
         method: "PUT",
         headers: {
@@ -31,7 +32,8 @@ const Delivery_Dashboard = () => {
   
     // Handle meal delivery status update
     try {
-      const api_url = "http://localhost:3000";
+      // const api_url = "http://localhost:3000";
+      const api_url = import.meta.env.VITE_API_URL
       let mealUpdateData = {};
   
       if (mDel === false) {

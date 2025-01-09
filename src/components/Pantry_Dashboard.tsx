@@ -40,7 +40,8 @@ const Pantry_Dashboard = () => {
 
   const onMealPreparation = async (mealId: string, mealType: string) => {
     try {
-      const api_url = "http://localhost:3000"
+      // const api_url = "http://localhost:3000"
+      const api_url = import.meta.env.VITE_API_URL
       const response = await fetch(`${api_url}/meals/update/${mealId}`, {
         method: 'PUT',
         headers: {
@@ -62,7 +63,8 @@ const Pantry_Dashboard = () => {
     const delPersonAssigned = delPeople.find((p)=>p.id === DelPersonId)
     const prevMealIds = delPersonAssigned?.mealId || []
     try {
-      const api_url = "http://localhost:3000"
+      // const api_url = "http://localhost:3000"
+      const api_url = import.meta.env.VITE_API_URL
       const response = await fetch(`${api_url}/delivery/update/${DelPersonId}`, {
         method: 'PUT',
         headers: {
@@ -80,7 +82,8 @@ const Pantry_Dashboard = () => {
     }
 
     try {
-      const api_url = "http://localhost:3000"
+      // const api_url = "http://localhost:3000"
+      const api_url = import.meta.env.VITE_API_URL
       const response = await fetch(`${api_url}/meals/update/${thisMealId}`, {
         method: 'PUT',
         headers: {

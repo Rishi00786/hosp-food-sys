@@ -59,7 +59,8 @@ const Manager_Dashboard = () => {
   useEffect(() => {
     const fetchUsers = async () => {
       try {
-        const api_url = "http://localhost:3000"
+        // const api_url = "http://localhost:3000"
+        const api_url = import.meta.env.VITE_API_URL
         const res = await fetch(`${api_url}/user`);
         const data: User[] = await res.json();
         setUsers(data);
@@ -70,7 +71,8 @@ const Manager_Dashboard = () => {
 
     const fetchMeals = async () => {
       try {
-        const api_url = "http://localhost:3000"
+        // const api_url = "http://localhost:3000"
+        const api_url = import.meta.env.VITE_API_URL
         const res = await fetch(`${api_url}/meals`);
         const data: Meals[] = await res.json();
         setMeals(data);
@@ -82,7 +84,8 @@ const Manager_Dashboard = () => {
 
     const fetchPantryStaff = async () => {
       try {
-        const api_url = "http://localhost:3000"
+        // const api_url = "http://localhost:3000"
+        const api_url = import.meta.env.VITE_API_URL
         const res = await fetch(`${api_url}/pantry`);
         const data: Pantry[] = await res.json();
         setPantryPeople(data);
@@ -99,7 +102,8 @@ const Manager_Dashboard = () => {
 
   const handleCreateUser = async (data: unknown) => {
     try {
-      const api_url = 'http://localhost:3000';
+      // const api_url = 'http://localhost:3000';
+      const api_url = import.meta.env.VITE_API_URL
       const response = await fetch(`${api_url}/user/create`, {
         method: 'POST',
         headers: {
@@ -123,7 +127,8 @@ const Manager_Dashboard = () => {
 
   const handleCreateMeals = async (data: unknown) => {
     try {
-      const api_url = 'http://localhost:3000';
+      // const api_url = 'http://localhost:3000';
+      const api_url = import.meta.env.VITE_API_URL
       const response = await fetch(`${api_url}/meals/create/${thisUserId}`, {
         method: 'POST',
         headers: {
@@ -155,7 +160,8 @@ const Manager_Dashboard = () => {
 
     const assignedIdsArray = thisPantry.mealId || [];
     try {
-      const api_url = "http://localhost:3000";
+      // const api_url = "http://localhost:3000";
+      const api_url = import.meta.env.VITE_API_URL
       const response = await fetch(`${api_url}/pantry/update/${pantryId}`, {
         method: 'PUT',
         headers: {
@@ -177,7 +183,8 @@ const Manager_Dashboard = () => {
     }
 
     try {
-      const api_url = "http://localhost:3000";
+      // const api_url = "http://localhost:3000";
+      const api_url = import.meta.env.VITE_API_URL
       const response = await fetch(`${api_url}/meals/update/${thisMealId}`, {
         method: 'PUT',
         headers: {

@@ -64,7 +64,8 @@ const App = () => {
   useEffect(() => {
     const fetchUsers = async () => {
       try {
-        const api_url = "http://localhost:3000"
+        const api_url = import.meta.env.VITE_API_URL
+        // const api_url = "http://localhost:3000"
         const res = await fetch(`${api_url}/user`);
         const data: User[] = await res.json();
         setUsers(data);
@@ -75,7 +76,8 @@ const App = () => {
 
     const fetchMeals = async () => {
       try {
-        const api_url = "http://localhost:3000"
+        const api_url = import.meta.env.VITE_API_URL
+        // const api_url = "http://localhost:3000"
         const res = await fetch(`${api_url}/meals`);
         const data: Meals[] = await res.json();
         setMeals(data);
@@ -87,7 +89,8 @@ const App = () => {
 
     const fetchPantryStaff = async () => {
       try {
-        const api_url = "http://localhost:3000"
+        const api_url = import.meta.env.VITE_API_URL
+        // const api_url = "http://localhost:3000"
         const res = await fetch(`${api_url}/pantry`);
         const data: Pantry[] = await res.json();
         setPantryPeople(data);
@@ -99,7 +102,8 @@ const App = () => {
 
     const fetchDelStaff = async () => {
       try {
-        const api_url = "http://localhost:3000"
+        const api_url = import.meta.env.VITE_API_URL
+        // const api_url = "http://localhost:3000"
         const res = await fetch(`${api_url}/delivery`);
         const data: Delivery[] = await res.json();
         setDelPeople(data);
