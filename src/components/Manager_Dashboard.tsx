@@ -224,6 +224,14 @@ const Manager_Dashboard = () => {
                         </p>
                       </div>
                     </div>
+                    <div className="w-1/2 mt-8">
+                      <button
+                        // onClick={handleLogout}
+                        className="w-full py-3 px-5 bg-red-500 text-white text-lg font-semibold rounded-lg shadow hover:bg-red-600 transition"
+                      >
+                        Assign
+                      </button>
+                    </div>
                   </div>
                 ) : (
                   <div className="mt-8">
