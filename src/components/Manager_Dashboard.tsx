@@ -121,8 +121,8 @@ const Manager_Dashboard = () => {
       }
 
       // console.log(response.json())
-      const createdUser: User = await response.json();
-      setUsers([...users, createdUser]);
+      // const createdUser: User = await response.json();
+      // setUsers([...users, createdUser]);
       setShowUserModal(false);
     } catch (error) {
       console.error("Error creating user:", error);
@@ -219,7 +219,7 @@ const Manager_Dashboard = () => {
           </button>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 mt-12">
-          {users.map((user) => {
+          {users?.map((user) => {
             const userMeals = meals.find((meal) => meal.userId === user.id);
             // console.log(userMeals)
 
