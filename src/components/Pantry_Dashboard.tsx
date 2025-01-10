@@ -41,7 +41,8 @@ const Pantry_Dashboard = () => {
   const onMealPreparation = async (mealId: string, mealType: string) => {
     try {
       // const api_url = "http://localhost:3000"
-      const api_url = import.meta.env.VITE_API_URL
+      // const api_url = import.meta.env.VITE_API_URL
+      const api_url = "https://hosp-food-sys-bknd.onrender.com"
       const response = await fetch(`${api_url}/meals/update/${mealId}`, {
         method: 'PUT',
         headers: {
@@ -64,7 +65,8 @@ const Pantry_Dashboard = () => {
     const prevMealIds = delPersonAssigned?.mealId || []
     try {
       // const api_url = "http://localhost:3000"
-      const api_url = import.meta.env.VITE_API_URL
+      // const api_url = import.meta.env.VITE_API_URL
+      const api_url = "https://hosp-food-sys-bknd.onrender.com"
       const response = await fetch(`${api_url}/delivery/update/${DelPersonId}`, {
         method: 'PUT',
         headers: {
@@ -83,7 +85,8 @@ const Pantry_Dashboard = () => {
 
     try {
       // const api_url = "http://localhost:3000"
-      const api_url = import.meta.env.VITE_API_URL
+      // const api_url = import.meta.env.VITE_API_URL
+      const api_url = "https://hosp-food-sys-bknd.onrender.com"
       const response = await fetch(`${api_url}/meals/update/${thisMealId}`, {
         method: 'PUT',
         headers: {
